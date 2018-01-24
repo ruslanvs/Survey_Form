@@ -1,0 +1,1 @@
+Django educational assignment at Coding Dojo

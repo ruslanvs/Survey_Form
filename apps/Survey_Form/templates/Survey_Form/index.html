@@ -5,7 +5,26 @@
     <title>Survey Form</title>
 </head>
 <body>
-    Survey Form
-    
+    <h1>Survey Form</h1>
+    <form action="process" method="POST">
+        {% csrf_token %}
+        <div>
+            Your Name:
+            <input name="name" type="text">
+        </div>
+        <div>
+            Dojo Location:
+            <input name="location" type="text">
+        </div>
+        <div>
+            Favorite Language:
+            <input name="language" type="text">
+        </div>
+        <div>
+            Comment (optional):
+            <textarea name="comment"></textarea>
+            <input type="submit">
+        </div>
+    </form>
 </body>
 </html>
