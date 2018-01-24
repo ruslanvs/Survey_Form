@@ -11,4 +11,13 @@ def index( request ):
 
 def form_process( request ):
     print "SUBMIT"
+    request.session['name'] = request.POST['name']
+    request.session['location'] = request.POST['location']
+    request.session['language'] = request.POST['language']
+    request.session['comment'] = request.POST['comment']
+    print request.POST
+    return redirect( '/survey_form/result' )
+
+def result( request ):
+    print "result route"
     return render( request, "Survey_Form/result.html" )

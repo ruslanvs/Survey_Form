@@ -13,16 +13,16 @@
   
     <h1>Submitted Information:</h1>
     <div>
-        Name: {{ request.POST.name }}
+        Name: {{ request.session.name }}
     </div>
     <div>
-        Location: {{ request.POST.location }}
+        Location: {{ request.session.location }}
     </div>
     <div>
-        Language: {{ request.POST.language }}
+        Language: {{ request.session.language }}
     </div>
     <div>
-        Comment: {{ request.POST.comment }}
+        Comment: {{ request.session.comment }}
     </div>
     <form action="index">
         <input type="submit" value="Start Over">
